@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SportHouse</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: #000000;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        nav {
+            background-color: #044e70;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 15px 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #cfd8dc;
+        }
+
+        main {
+            background-color: #ffffff;
+            padding: 0;
+            justify-content: center;
+            margin-top: 0;
+        }
+
+        main .container {
+            background-color: #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            justify-content: center;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        article {
+            color: #333;
+            line-height: 1.5;
+        }
+
+        article h2 {
+            margin-bottom: 10px;
+        }
+
+        .team {
+            text-align: center;
+        }
+
+        .team h2 {
+            color: #000000;
+            margin-bottom: 30px;
+        }
+
+        .team-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 90%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-content h3 {
+            font-size: 1.6em;
+            margin-bottom: 10px;
+            color: #000000;
+        }
+
+        .card-content p {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .gallery {
+            text-align: center;
+        }
+
+        .gallery h2 {
+            color: #000000;
+            margin-bottom: 20px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 4px solid transparent;
+            transition: transform 0.3s ease, border 0.3s ease;
+            cursor: pointer;
+        }
+
+        .gallery-grid img:hover {
+            transform: scale(1.05);
+            border: 4px solid #044e70;
+            filter: brightness(1.2);
+        }
+
+        footer {
+            background-color: #263238;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 992px) {
+            .card {
+                width: 100%;
+                max-width: 500px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>SportHouse</h1>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <a href="#">Nosotros</a>
+            <a href="#">Nuestros Productos</a>
+            <a href="#">Contacto</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <article>
+                <h2>Misión</h2>
+                <p>Ofrecer a nuestros clientes ropa deportiva de alta calidad, que combine estilo, comodidad y
+                    rendimiento, promoviendo un estilo de vida activo y saludable.</p>
+            </article>
+            <article>
+                <h2>Visión</h2>
+                <p>Ser la tienda de referencia en ropa deportiva a nivel nacional, innovando constantemente en nuestros
+                    productos y servicios para superar las expectativas de nuestros clientes.</p>
+            </article>
+
+            <section class="team">
+                <h2>Nuestro Equipo de Trabajo</h2>
+                <div class="team-cards">
+                    <div class="card">
+                        <img src="imagenes/trabajador1.jpg" alt="Angelo Velasquez">
+                        <div class="card-content">
+                            <h3>Angelo Velasquez</h3>
+                            <p>Ingeniero de Sistemas de la empresa. Más de 20 años de experiencia lo respaldan.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="imagenes/t2.jpg" alt="Julia Alva">
+                        <div class="card-content">
+                            <h3>Julia Alva</h3>
+                            <p>Diseñadora de nuestro sitio web. Cuenta con amplia experiencia en el rubro.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="imagenes/t3.jpg" alt="Manuel Arias">
+                        <div class="card-content">
+                            <h3>Manuel Arias</h3>
+                            <p>Desarrollador web Full Stack experto en comercio electrónico. Encargado del mantenimiento
+                                de nuestro sitio web.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="gallery">
+                <h2>Zapatillas</h2>
+                <div class="gallery-grid">
+                    <img src="imagenes/z1.jpeg" alt="Producto 1">
+                    <img src="imagenes/z2.jpeg" alt="Producto 2">
+                    <img src="imagenes/z3.jpeg" alt="Producto 3">
+                    <img src="imagenes/z4.jpeg" alt="Producto 4">
+                    <img src="imagenes/z5.jpeg" alt="Producto 5">
+                    <img src="imagenes/z6.jpeg" alt="Producto 6">
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 SportHouse. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
